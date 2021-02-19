@@ -31,6 +31,7 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.modern.js",
+    "./loaders": "./dist/loaders.modern.js",
     "./text": "./dist/text.modern.js",
     "./package.json": "./package.json"
   },
