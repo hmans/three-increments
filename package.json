@@ -1,0 +1,54 @@
+{
+  "name": "three-increments",
+  "version": "0.0.1",
+  "author": {
+    "name": "Hendrik Mans",
+    "email": "hendrik@mans.de",
+    "url": "https://hmans.co/"
+  },
+  "description": "A collection of helpers for three-elements.",
+  "homepage": "https://github.com/hmans/three-increments",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmans/three-increments"
+  },
+  "keywords": [
+    "webgl",
+    "three",
+    "graphics",
+    "gamedev",
+    "webcomponents"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.modern.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "docs": "typedoc",
+    "watch": "yarn clean && microbundle watch --globals three=THREE",
+    "build": "yarn clean && microbundle --globals three=THREE",
+    "test": "web-test-runner --puppeteer",
+    "prepublishOnly": "yarn build && yarn test"
+  },
+  "dependencies": {
+    "three-elements": "^0.4.0-alpha.14"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "rimraf": "^3.0.2"
+  }
+}
