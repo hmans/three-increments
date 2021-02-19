@@ -24,15 +24,15 @@
     "access": "public"
   },
   "license": "MIT",
+  "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.modern.js",
-    "./loaders": "./dist/loaders.modern.js",
-    "./text": "./dist/text.modern.js",
+    ".": "./dist/index.js",
+    "./loaders": "./dist/loaders.js",
+    "./text": "./dist/text.js",
     "./package.json": "./package.json"
   },
   "files": [
@@ -41,8 +41,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "docs": "typedoc",
-    "watch": "yarn clean && microbundle watch src/*.ts --globals three=THREE",
-    "build": "yarn clean && microbundle build src/*.ts --globals three=THREE",
+    "watch": "yarn tsc --watch",
+    "build": "yarn tsc",
     "test": "web-test-runner --puppeteer",
     "prepublishOnly": "yarn build && yarn test"
   },
