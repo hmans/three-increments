@@ -42,7 +42,7 @@
     "watch": "yarn clean && microbundle watch --globals three=THREE",
     "build": "yarn clean && microbundle --globals three=THREE",
     "test": "web-test-runner --puppeteer",
-    "prepublishOnly": "yarn build && yarn test"
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "three-elements": "^0.4.0-alpha.14"
