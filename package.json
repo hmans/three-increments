@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "microbundle": "^0.13.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typedoc": "^0.20.25"
   }
 }
