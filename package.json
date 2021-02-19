@@ -31,6 +31,7 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.modern.js",
+    "./text": "./dist/text.modern.js",
     "./package.json": "./package.json"
   },
   "files": [
@@ -39,13 +40,14 @@
   "scripts": {
     "clean": "rimraf dist",
     "docs": "typedoc",
-    "watch": "yarn clean && microbundle watch --globals three=THREE",
-    "build": "yarn clean && microbundle --globals three=THREE",
+    "watch": "yarn clean && microbundle watch src/*.ts --globals three=THREE",
+    "build": "yarn clean && microbundle build src/*.ts --globals three=THREE",
     "test": "web-test-runner --puppeteer",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "three-elements": "^0.4.0-alpha.14"
+    "three-elements": "^0.4.0-alpha.14",
+    "troika-three-text": "^0.39.2"
   },
   "devDependencies": {
     "microbundle": "^0.13.0",
