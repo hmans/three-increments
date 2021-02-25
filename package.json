@@ -44,7 +44,8 @@
     "watch": "yarn tsc --watch",
     "build": "yarn tsc",
     "test": "web-test-runner --puppeteer",
-    "prepublishOnly": "yarn build && yarn test"
+    "prepublishOnly": "yarn build && yarn test",
+    "ci": "yarn build && yarn test"
   },
   "dependencies": {
     "three-elements": "^0.4.0-alpha.14",
