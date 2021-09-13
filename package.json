@@ -62,6 +62,6 @@
     "microbundle": "^0.13.0",
     "rimraf": "^3.0.2",
     "three": "^0.125.2",
-    "typedoc": "^0.20.25"
+    "typedoc": "^0.22.3"
   }
 }
