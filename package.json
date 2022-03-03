@@ -61,7 +61,7 @@
     "@web/test-runner-puppeteer": "^0.9.3",
     "microbundle": "^0.13.0",
     "rimraf": "^3.0.2",
-    "three": "^0.125.2",
+    "three": "^0.138.3",
     "typedoc": "^0.20.25"
   }
 }
